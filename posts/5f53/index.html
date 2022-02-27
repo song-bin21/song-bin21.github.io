@@ -426,7 +426,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    9.2k
+                    9.4k
                 </div>
                 
 
@@ -570,7 +570,23 @@ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new post <span class="token string">"article title"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>然后打开<code>F:\MyBlog\source\_posts</code>的目录，可以发现下面多了一个文件夹和一个<code>.md</code>文件，一个用来存放你的图片等数据，另一个就是你的文章文件。</p>
-<h4 id="1-1-新建文章自动打开编辑器"><a href="#1-1-新建文章自动打开编辑器" class="headerlink" title="1.1 新建文章自动打开编辑器"></a>1.1 新建文章自动打开编辑器</h4><h3 id="2-写文章"><a href="#2-写文章" class="headerlink" title="2. 写文章"></a>2. 写文章</h3><p>打开对应的<code>markdown</code>文件，使用<code>markdown</code>编辑器编写文件。本人使用<strong>Typora</strong>编辑器。</p>
+<h4 id="1-1-新建文章自动打开编辑器"><a href="#1-1-新建文章自动打开编辑器" class="headerlink" title="1.1 新建文章自动打开编辑器"></a>1.1 新建文章自动打开编辑器</h4><p>写新文章时，需要控制台执行 <code>hexo new "文章名字"</code>，这样就会在<code>_posts</code> 下生成一篇新文章，但需要手动打开，挺麻烦，只需要在站点根目录下新建 <code>scripts</code> 目录，然后在新建 <code>auto_open.js</code>，在文件填入一下内容：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> spawn <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'child_process'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>exec<span class="token punctuation">;</span>
+
+<span class="token comment">// Hexo 2.x 用户复制这段</span>
+<span class="token comment">//hexo.on('new', function(path){</span>
+  <span class="token comment">//spawn('start  "markdown编辑器绝对路径.exe" ' + path);</span>
+<span class="token comment">//});</span>
+
+<span class="token comment">// Hexo 3 用户复制这段</span>
+hexo<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'new'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">spawn</span><span class="token punctuation">(</span><span class="token string">'start  "D:\Program Files\Typora\Typora.exe" '</span> <span class="token operator">+</span> data<span class="token punctuation">.</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其中 <code>"D:\Program Files\Typora\Typora.exe"</code> 是我本地编辑器的路径，只需要改为你本地编辑器的路径即可，然后在执行 <code>hexo cl &amp;&amp; hexo g -d</code>，部署到 GitHub 即可，以后在发布文章就会自动打开编辑器。</p>
+<blockquote>
+</blockquote>
+<h3 id="2-写文章"><a href="#2-写文章" class="headerlink" title="2. 写文章"></a>2. 写文章</h3><p>打开对应的<code>markdown</code>文件，使用<code>markdown</code>编辑器编写文件。本人使用<strong>Typora</strong>编辑器。</p>
 <h3 id="3-发布文章"><a href="#3-发布文章" class="headerlink" title="3.  发布文章"></a>3.  发布文章</h3><p>编写完<code>markdown</code>文件后，根目录下输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>可以本地预览效果，最后输入<code>hexo d</code>上传到<code>github</code>上。这时打开你的<code>github.io</code>主页就能看到发布的文章了。</p>
 <p>到此为止，利用<code>Hexo</code>框架初级搭建就已经完成了。</p>
 <h2 id="Hexo-优化定制"><a href="#Hexo-优化定制" class="headerlink" title="Hexo 优化定制"></a>Hexo 优化定制</h2><h3 id="1-Hexo文件目录结构"><a href="#1-Hexo文件目录结构" class="headerlink" title="1. Hexo文件目录结构"></a>1. Hexo文件目录结构</h3><blockquote>
@@ -1442,7 +1458,7 @@ tags:
     <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="更多详细教程"><a href="#更多详细教程" class="headerlink" title="更多详细教程"></a>更多详细教程</h2><p>以下几篇文章都是基于<code>Hexo</code>框架和<code>hexo-theme-matery</code>主题优化的教程，大家如果遇到问题，可以参考其中的方法。</p>
+<h2 id="参考文章和更多详细教程"><a href="#参考文章和更多详细教程" class="headerlink" title="参考文章和更多详细教程"></a>参考文章和更多详细教程</h2><p>以下几篇文章都是基于<code>Hexo</code>框架和<code>hexo-theme-matery</code>主题优化的教程，大家如果遇到问题，可以参考其中的方法。</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="http://luckyzmj.cn/posts/e3e08109.html#toc-heading-15">个人博客搭建 | LuckySec (luckyzmj.cn)</a></li>
 <li><a target="_blank" rel="noopener" href="https://sunhwee.com/posts/6e8839eb.html">Hexo+Github博客搭建完全教程</a></li>
@@ -1530,7 +1546,7 @@ tags:
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="/libs/share/js/social-share.min.js"></script>
     
 
@@ -1564,7 +1580,7 @@ tags:
 
     #vcomments textarea {
         box-sizing: border-box;
-        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+        background: url("/") 100% 100% no-repeat;
     }
 
     #vcomments p {
@@ -1799,22 +1815,37 @@ tags:
 </div>
 
 <script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
     new Valine({
         el: '#vcomments',
+        admin_email: '1759503672@qq.com',
         appId: 'wUFhG0lVpwPYJ8FjV0dOreQr-gzGzoHsz',
         appKey: 'ODsF0IllDfJG3HnnsKzN4BMe',
+        path: window.location.pathname,
+        comment_count: true,
         notify: 'false' === 'true',
-        verify: 'false' === 'true',
+        verify: 'true' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'mm',
+        avatar: 'monsterid',
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: '可以在这里留言评论~'
     });
+    $(document).ready(function(){
+        $("#vcomments").on('click', 'span.vat',function(){
+            $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+            $('textarea#veditor').focus();
+        })
+    })
 </script>
-
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+    jinrishici.load(function(result) {
+        var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+        document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+    });
+</script>
 <!--酷Q推送-->
 
 
@@ -1833,36 +1864,54 @@ tags:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/3eeb/">
+                <a href="/posts/5f53/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="个人博客搭建">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">个人博客搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            利用Hexo+matery主题搭建个人博客
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-26
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            SongBin
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    个人博客搭建
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/matery/">
+                        <span class="chip bg-color">matery</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -2118,7 +2167,7 @@ tags:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.3k</span>
+                        class="white-color">9.4k</span>
             
             
             
@@ -2152,8 +2201,8 @@ tags:
                         var startYear = "2022";
                         var startMonth = "2";
                         var startDate = "27";
-                        var startHour = "0";
-                        var startMinute = "0";
+                        var startHour = "12";
+                        var startMinute = "30";
                         var startSecond = "0";
                         var todayYear = today.getFullYear();
                         var todayMonth = today.getMonth() + 1;

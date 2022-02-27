@@ -518,7 +518,7 @@
 
     #vcomments textarea {
         box-sizing: border-box;
-        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+        background: url("/") 100% 100% no-repeat;
     }
 
     #vcomments p {
@@ -753,22 +753,37 @@
 </div>
 
 <script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
     new Valine({
         el: '#vcomments',
+        admin_email: '1759503672@qq.com',
         appId: 'wUFhG0lVpwPYJ8FjV0dOreQr-gzGzoHsz',
         appKey: 'ODsF0IllDfJG3HnnsKzN4BMe',
+        path: window.location.pathname,
+        comment_count: true,
         notify: 'false' === 'true',
-        verify: 'false' === 'true',
+        verify: 'true' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'mm',
+        avatar: 'monsterid',
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: '可以在这里留言评论~'
     });
+    $(document).ready(function(){
+        $("#vcomments").on('click', 'span.vat',function(){
+            $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+            $('textarea#veditor').focus();
+        })
+    })
 </script>
-
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+    jinrishici.load(function(result) {
+        var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+        document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+    });
+</script>
 <!--酷Q推送-->
 
 
@@ -861,7 +876,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.3k</span>
+                        class="white-color">9.4k</span>
             
             
             
@@ -895,8 +910,8 @@
                         var startYear = "2022";
                         var startMonth = "2";
                         var startDate = "27";
-                        var startHour = "0";
-                        var startMinute = "0";
+                        var startHour = "12";
+                        var startMinute = "30";
                         var startSecond = "0";
                         var todayYear = today.getFullYear();
                         var todayMonth = today.getMonth() + 1;
