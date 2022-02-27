@@ -757,8 +757,11 @@
 <script>
     new Valine({
         el: '#vcomments',
+        admin_email: '1759503672@qq.com',
         appId: 'wUFhG0lVpwPYJ8FjV0dOreQr-gzGzoHsz',
         appKey: 'ODsF0IllDfJG3HnnsKzN4BMe',
+        path: window.location.pathname,
+        comment_count: true,
         notify: 'false' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
@@ -766,6 +769,19 @@
         pageSize: '12',
         lang: 'zh-cn',
         placeholder: '可以在这里留言评论~'
+    });
+    $(document).ready(function(){ 
+        $("#vcomments").on('click', 'span.vat',function(){ 
+            $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap")); 
+            $('textarea#veditor').focus(); 
+        }) 
+    })
+</script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+    jinrishici.load(function(result) {
+        var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+        document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
     });
 </script>
 
