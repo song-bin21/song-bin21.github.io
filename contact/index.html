@@ -18,7 +18,7 @@
 
 
     <title>contact | LuckySong</title>
-    <link rel="icon" type="image/png" href="/medias/Lucky_Song_logo.png">
+    <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -45,7 +45,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/Lucky_Song_logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">LuckySong</span>
                 </a>
@@ -144,7 +144,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/Lucky_Song_logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">LuckySong</div>
         <div class="logo-desc">
@@ -332,7 +332,7 @@
                     <b>博客名称: LuckySong</b><br>
                     <b>博客网址: https://song-bin21.github.io</b><br>
                     <b>博客头像: https://song-bin21.github.io/medias/logo.png</b><br>
-                    <b>博客介绍: 犹豫就会败北</b><br>
+                    <!-- <b>博客介绍: 随心而动<br> -->
                 </p>
                 <div class="container">
                     <section id="custom" class="bb-section">
@@ -340,18 +340,19 @@
                             <div class="col-md-5">
                                 <form class="form-inline">
                                     <div class="form-group">
-                                        文字：<input class="form-control" name="info" type="text" placeholder="hello, world"/>
+                                        弹幕留言：<input class="form-control" name="info" type="text" placeholder="在这留言哦~"/>
                                     </div>
                                     <div class="form-group">
-                                        链接：<input class="form-control" name="href" type="text" placeholder="https://github.com/blinkfox/hexo-theme-matery"/>
+                                        你的主页：<input class="form-control" name="href" type="text" placeholder="交换友链，没有可不填~如我的博客：https://song-bin21.github.io"/>
+                                        <!-- 链接：<input class="form-control" name="href" type="text" placeholder="https://github.com/blinkfox/hexo-theme-matery"/> -->
                                     </div>
                                     <div class="form-group">
-                                        速度：<input  class="form-control"  name="speed" type="text" placeholder="5~20" value="16" />
+                                        弹幕速度：<input  class="form-control"  name="speed" type="text" placeholder="5~20" value="16" />
                                     </div>
                                 </form>
                                 <div class="form-group">
                                     <button id="send"  class="btn" onclick="run()">留言</button>
-                                    <button id="clear" class="btn " onclick="clear_barrage()"> 清除</button>
+                                    <button id="clear" class="btn " onclick="clear_barrage()"> 弹幕清屏</button>
                                 </div>
                             </div>
                         </div>
@@ -397,9 +398,11 @@
                     //发送弹幕
                     function  run(){
                         let info = $('input[name=info]').val();
-                        (info === '' ) ?  info='hello world' : info=info;
+                        (info === '' ) ?  info='我来踩踩~' : info=info;
+                        /* (info === '' ) ?  info='hello world' : info=info; */
                         let href = $('input[name=href]').val();
-                        (href === '' ) ?  href='https://github.com/blinkfox/hexo-theme-matery' : href=href;
+                        (href === '' ) ?  href='' : href=href;
+                        /* (href === '' ) ?  href='https://github.com/blinkfox/hexo-theme-matery' : href=href; */
                         let speed = parseInt($('input[name=speed]').val());
                         if(speed > 20 || speed < 5)
                             speed = Math.floor(Math.random() * 10) + 5;
