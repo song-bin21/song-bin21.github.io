@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机中数据的表示和运算, LuckySong">
-    <meta name="description" content="计算机中数据的表示和运算">
+    <meta name="keywords" content="数制, LuckySong">
+    <meta name="description" content="数字电路基础，计算机硬件基础">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机中数据的表示和运算 | LuckySong</title>
+    <title>数制 | LuckySong</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机中数据的表示和运算</h1>
+                    <h1 class="description center-align post-title">数制</h1>
                 </div>
             </div>
         </div>
@@ -383,12 +383,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
-                                <span class="chip bg-color">计算机组成原理</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/">
-                                <span class="chip bg-color">计算机中数据的表示和运算</span>
+                            <a href="/tags/%E6%95%B0%E5%88%B6%E4%B8%8E%E6%95%B0%E5%88%B6%E8%BD%AC%E6%8D%A2/">
+                                <span class="chip bg-color">数制与数制转换</span>
                             </a>
                         
                     </div>
@@ -399,8 +395,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/" class="post-category">
-                                计算机理论
+                            <a href="/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/" class="post-category">
+                                数字电路
+                            </a>
+                        
+                            <a href="/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="post-category">
+                                计算机
                             </a>
                         
                     </div>
@@ -412,7 +412,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-04
+                    2022-03-21
                 </div>
                 
 
@@ -426,7 +426,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    446
                 </div>
                 
 
@@ -456,7 +456,193 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">
+                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="常用数制"><a href="#常用数制" class="headerlink" title="常用数制"></a>常用数制</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>十进制(Decimal notation)</th>
+<th>二进制(Binary notation)</th>
+<th>八进制(Octal notation)</th>
+<th>十六进制(Hexadecima1 notation)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数码</td>
+<td>0,1,2,3,4,5,6,7,8,9</td>
+<td>0,1</td>
+<td>0,1,2,3,4,5,6,7</td>
+<td>0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F</td>
+</tr>
+<tr>
+<td>进位规则</td>
+<td>逢十进一</td>
+<td>逢二进一</td>
+<td>逢八进一</td>
+<td>逢十六进一</td>
+</tr>
+<tr>
+<td>基数</td>
+<td>10</td>
+<td>2</td>
+<td>8</td>
+<td>16</td>
+</tr>
+<tr>
+<td>位权</td>
+<td>$10^2,10^1,10^0,10^{-1},10^{-2}$</td>
+<td>$2^2,2^1,2^0,2^{-1},2^{-2}$</td>
+<td>$8^2,8^1,8^0,8^{-1},8^{-2}$</td>
+<td>$16^2,16^1,16^0,16^{-1},16^{-2}$</td>
+</tr>
+<tr>
+<td>表示方法</td>
+<td>D</td>
+<td>B</td>
+<td>O</td>
+<td>H</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="4种数制对应关系"><a href="#4种数制对应关系" class="headerlink" title="4种数制对应关系"></a>4种数制对应关系</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>十进制</th>
+<th>二进制</th>
+<th>八进制</th>
+<th>十六进制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0001</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0010</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0011</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0100</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0101</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0110</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0111</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1000</td>
+<td>10</td>
+<td>8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1001</td>
+<td>11</td>
+<td>9</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1010</td>
+<td>12</td>
+<td>10</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1011</td>
+<td>13</td>
+<td>11</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1100</td>
+<td>14</td>
+<td>12</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1101</td>
+<td>15</td>
+<td>13</td>
+</tr>
+<tr>
+<td>14</td>
+<td>1110</td>
+<td>16</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>1111</td>
+<td>17</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>我们可以讲这种进制对应关系看做一种编码规则</p>
+<h2 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h2></blockquote>
+<h3 id="二-八-十六进制数转换"><a href="#二-八-十六进制数转换" class="headerlink" title="二-八-十六进制数转换"></a>二-八-十六进制数转换</h3><ol>
+<li>二-八进制数转换：二进制低位始,3位一组转化为八进制</li>
+<li>二-十六进制数转换：二进制低位始,4位一组转化为十六进制</li>
+</ol>
+<h3 id="十进制数转换为任意进制数"><a href="#十进制数转换为任意进制数" class="headerlink" title="十进制数转换为任意进制数"></a>十进制数转换为任意进制数</h3><ol>
+<li>基数(模)乘除法<ol>
+<li>整数部分：除模取余法,商0为止</li>
+<li>小数部分：乘模取整法,精度满足为止</li>
+</ol>
+</li>
+<li>先转换为二进制数，再按二-八-十六进制数转换</li>
+</ol>
+<h3 id="任意进制数转换为十进制数"><a href="#任意进制数转换为十进制数" class="headerlink" title="任意进制数转换为十进制数"></a>任意进制数转换为十进制数</h3><ol>
+<li>按权展开相加法</li>
+</ol>
+<h2 id="二进制算术运算"><a href="#二进制算术运算" class="headerlink" title="二进制算术运算"></a>二进制算术运算</h2><ol>
+<li>加法运算(进位运算)</li>
+<li>减法运算(借位运算)</li>
+<li>乘法运算(转化为位权移位加法运算)</li>
+</ol>
+<h1 id="计算机中二进制数据的表示和运算"><a href="#计算机中二进制数据的表示和运算" class="headerlink" title="计算机中二进制数据的表示和运算"></a>计算机中二进制数据的表示和运算</h1><blockquote>
+<p>后补</p>
+</blockquote>
+
                 
             </div>
             <hr/>
@@ -482,7 +668,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://song-bin21.github.io/posts/df9ee6ae/">https://song-bin21.github.io/posts/df9ee6ae/</a>
+                    <a href="https://song-bin21.github.io/posts/b3aa977/">https://song-bin21.github.io/posts/b3aa977/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -520,12 +706,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
-                                    <span class="chip bg-color">计算机组成原理</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/">
-                                    <span class="chip bg-color">计算机中数据的表示和运算</span>
+                                <a href="/tags/%E6%95%B0%E5%88%B6%E4%B8%8E%E6%95%B0%E5%88%B6%E8%BD%AC%E6%8D%A2/">
+                                    <span class="chip bg-color">数制与数制转换</span>
                                 </a>
                             
                         </div>
@@ -839,9 +1021,64 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/b3aa977/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="数制">
+                        
+                        <span class="card-title">数制</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            数字电路基础，计算机硬件基础
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/" class="post-category">
+                                    数字电路
+                                </a>
+                            
+                            <a href="/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="post-category">
+                                    计算机
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E5%88%B6%E4%B8%8E%E6%95%B0%E5%88%B6%E8%BD%AC%E6%8D%A2/">
+                        <span class="chip bg-color">数制与数制转换</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/posts/eaded48d/">
                     <div class="card-image">
@@ -859,9 +1096,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -883,59 +1120,6 @@
                     
                     <a href="/tags/%E9%94%81%E5%AD%98%E5%99%A8/">
                         <span class="chip bg-color">锁存器</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/a673609b/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="C语言程序设计">
-                        
-                        <span class="card-title">C语言程序设计</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            C语言程序设计从入门到放弃(知识整理-来自菜鸟教程)
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-04
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/" class="post-category">
-                                    计算机理论
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">编程语言</span>
-                    </a>
-                    
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">C语言程序设计</span>
                     </a>
                     
                 </div>
@@ -1066,6 +1250,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 

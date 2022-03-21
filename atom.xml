@@ -6,7 +6,7 @@
   <link href="https://song-bin21.github.io/atom.xml" rel="self"/>
   
   <link href="https://song-bin21.github.io/"/>
-  <updated>2022-03-04T06:54:22.360Z</updated>
+  <updated>2022-03-21T09:36:07.539Z</updated>
   <id>https://song-bin21.github.io/</id>
   
   <author>
@@ -17,11 +17,65 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数制</title>
+    <link href="https://song-bin21.github.io/posts/b3aa977/"/>
+    <id>https://song-bin21.github.io/posts/b3aa977/</id>
+    <published>2022-03-21T07:03:24.000Z</published>
+    <updated>2022-03-21T09:36:07.539Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;常用数制&quot;&gt;&lt;a href=&quot;#常用数制&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数字电路" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/"/>
+    
+    <category term="计算机" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+    <category term="数制与数制转换" scheme="https://song-bin21.github.io/tags/%E6%95%B0%E5%88%B6%E4%B8%8E%E6%95%B0%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机中数据是如何存储的？</title>
+    <link href="https://song-bin21.github.io/posts/eaded48d/"/>
+    <id>https://song-bin21.github.io/posts/eaded48d/</id>
+    <published>2022-03-15T10:10:08.000Z</published>
+    <updated>2022-03-21T09:42:24.376Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;存储器概述&quot;&gt;&lt;a href=&quot;#存储器概述&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="计算机理论" scheme="https://song-bin21.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/"/>
+    
+    
+    <category term="存储系统" scheme="https://song-bin21.github.io/tags/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="锁存器" scheme="https://song-bin21.github.io/tags/%E9%94%81%E5%AD%98%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>计算机中数据的表示和运算</title>
     <link href="https://song-bin21.github.io/posts/df9ee6ae/"/>
     <id>https://song-bin21.github.io/posts/df9ee6ae/</id>
     <published>2022-03-04T04:00:00.000Z</published>
-    <updated>2022-03-04T06:54:22.360Z</updated>
+    <updated>2022-03-21T09:42:13.275Z</updated>
     
     
       
@@ -48,7 +102,7 @@
     <link href="https://song-bin21.github.io/posts/a673609b/"/>
     <id>https://song-bin21.github.io/posts/a673609b/</id>
     <published>2022-03-04T04:00:00.000Z</published>
-    <updated>2022-03-15T09:12:03.413Z</updated>
+    <updated>2022-03-21T09:17:21.252Z</updated>
     
     
       
@@ -75,7 +129,7 @@
     <link href="https://song-bin21.github.io/posts/480d/"/>
     <id>https://song-bin21.github.io/posts/480d/</id>
     <published>2022-02-28T06:18:38.000Z</published>
-    <updated>2022-03-15T09:14:39.047Z</updated>
+    <updated>2022-03-21T09:17:13.475Z</updated>
     
     
       
