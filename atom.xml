@@ -6,7 +6,7 @@
   <link href="https://song-bin21.github.io/atom.xml" rel="self"/>
   
   <link href="https://song-bin21.github.io/"/>
-  <updated>2022-03-21T09:36:07.539Z</updated>
+  <updated>2022-03-22T05:04:47.341Z</updated>
   <id>https://song-bin21.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://song-bin21.github.io/posts/b3aa977/"/>
     <id>https://song-bin21.github.io/posts/b3aa977/</id>
     <published>2022-03-21T07:03:24.000Z</published>
-    <updated>2022-03-21T09:36:07.539Z</updated>
+    <updated>2022-03-22T05:04:47.341Z</updated>
     
     
       
@@ -44,11 +44,69 @@
   </entry>
   
   <entry>
+    <title>数字(脉冲)信号</title>
+    <link href="https://song-bin21.github.io/posts/88e5118f/"/>
+    <id>https://song-bin21.github.io/posts/88e5118f/</id>
+    <published>2022-03-21T07:03:24.000Z</published>
+    <updated>2022-03-21T12:30:05.645Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数字电路" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/"/>
+    
+    <category term="计算机" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+    <category term="数字(脉冲)信号" scheme="https://song-bin21.github.io/tags/%E6%95%B0%E5%AD%97-%E8%84%89%E5%86%B2-%E4%BF%A1%E5%8F%B7/"/>
+    
+    <category term="数据的存储" scheme="https://song-bin21.github.io/tags/%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8/"/>
+    
+    <category term="通信" scheme="https://song-bin21.github.io/tags/%E9%80%9A%E4%BF%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基本门电路</title>
+    <link href="https://song-bin21.github.io/posts/89d6ea9b/"/>
+    <id>https://song-bin21.github.io/posts/89d6ea9b/</id>
+    <published>2022-03-21T07:03:24.000Z</published>
+    <updated>2022-03-22T08:47:07.997Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;逻辑门电路的基本概念&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="数字电路" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/"/>
+    
+    <category term="计算机" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+    <category term="逻辑门电路" scheme="https://song-bin21.github.io/tags/%E9%80%BB%E8%BE%91%E9%97%A8%E7%94%B5%E8%B7%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>计算机中数据是如何存储的？</title>
     <link href="https://song-bin21.github.io/posts/eaded48d/"/>
     <id>https://song-bin21.github.io/posts/eaded48d/</id>
     <published>2022-03-15T10:10:08.000Z</published>
-    <updated>2022-03-21T09:52:06.063Z</updated>
+    <updated>2022-03-21T10:36:41.915Z</updated>
     
     
       
@@ -102,7 +160,7 @@
     <link href="https://song-bin21.github.io/posts/a673609b/"/>
     <id>https://song-bin21.github.io/posts/a673609b/</id>
     <published>2022-03-04T04:00:00.000Z</published>
-    <updated>2022-03-21T09:17:21.252Z</updated>
+    <updated>2022-03-21T12:55:40.419Z</updated>
     
     
       
@@ -129,7 +187,7 @@
     <link href="https://song-bin21.github.io/posts/480d/"/>
     <id>https://song-bin21.github.io/posts/480d/</id>
     <published>2022-02-28T06:18:38.000Z</published>
-    <updated>2022-03-21T09:17:13.475Z</updated>
+    <updated>2022-03-21T10:58:57.041Z</updated>
     
     
       

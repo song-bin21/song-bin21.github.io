@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机中数据是如何存储的？, LuckySong">
-    <meta name="description" content="计算机中数据是如何存储的？">
+    <meta name="keywords" content="数字(脉冲)信号, LuckySong">
+    <meta name="description" content="数字电路基础，计算机硬件基础">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机中数据是如何存储的？ | LuckySong</title>
+    <title>数字(脉冲)信号 | LuckySong</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机中数据是如何存储的？</h1>
+                    <h1 class="description center-align post-title">数字(脉冲)信号</h1>
                 </div>
             </div>
         </div>
@@ -383,12 +383,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/">
-                                <span class="chip bg-color">存储系统</span>
+                            <a href="/tags/%E6%95%B0%E5%AD%97-%E8%84%89%E5%86%B2-%E4%BF%A1%E5%8F%B7/">
+                                <span class="chip bg-color">数字(脉冲)信号</span>
                             </a>
                         
-                            <a href="/tags/%E9%94%81%E5%AD%98%E5%99%A8/">
-                                <span class="chip bg-color">锁存器</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8/">
+                                <span class="chip bg-color">数据的存储</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%80%9A%E4%BF%A1/">
+                                <span class="chip bg-color">通信</span>
                             </a>
                         
                     </div>
@@ -399,8 +403,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/" class="post-category">
-                                计算机理论
+                            <a href="/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/" class="post-category">
+                                数字电路
+                            </a>
+                        
+                            <a href="/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="post-category">
+                                计算机
                             </a>
                         
                     </div>
@@ -412,7 +420,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-15
+                    2022-03-21
                 </div>
                 
 
@@ -426,14 +434,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.2k
+                    371
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    1 分
                 </div>
                 
 
@@ -456,225 +464,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="存储器概述"><a href="#存储器概述" class="headerlink" title="存储器概述"></a>存储器概述</h1><h2 id="存储器的分类"><a href="#存储器的分类" class="headerlink" title="存储器的分类"></a>存储器的分类</h2><p><img src="/images/610-存储系统/计算机存储器类型.svg" alt="计算机存储器类型"></p>
+                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>在数字电路中，<code>信号（电压和电流）</code>是脉冲的。脉冲是一种跃变信号，并且持续时间短暂，可短至几个微秒甚至几个纳秒。脉冲信号最常见的是矩形波和尖顶波，但实际波形并不理想，波形上升沿和下降沿并不是立即完成，需要一定时间。</p>
+<p><img src="/images/数字信号/非正弦波.png" alt="非正弦波"></p>
+<p>以矩形波为例，来说明脉冲信号波形的一些参数：</p>
+<p><img src="/images/数字信号/实际脉冲信号.png" alt="实际脉冲信号"></p>
 <ol>
-<li><strong>按在计算机中的作用（层次）分类</strong><ol>
-<li>主存储器<ul>
-<li>DRAM</li>
-<li>简称主存，又称内存储器（内存），用来存放计算机中运行期间所需的大量程序和数据，CPU可以直接随机地对其进行访问，也可以和高速缓冲存储器（Cache）及辅助存储器交换数据。</li>
-<li>其特点是容量小、存取速度较快、每位价格较高</li>
-</ul>
-</li>
-<li>辅助存储器<ul>
-<li>ROM</li>
-<li>简称辅存，又称外存储器（外存），是主存储器的后援存储器，用来存放当前暂时不用的程序和数据，以及一些需要永久保存的信息，它不能与CPU直接交换信息。</li>
-<li>其特点是容量极大、存取速度较慢、单位成本低</li>
-</ul>
-</li>
-<li>高速缓冲存储器<ul>
-<li>SRAM</li>
-<li>简称Cache，位于贮存和CPU之间，用来存放正在执行的程序段和数据，以便CPU能高速地使用它们。Cache的存取速度可与CPU的速度相匹配，但存储容量小、价格高。</li>
-<li>现代计算机通常将它们制作在CPU中</li>
-</ul>
-</li>
+<li>脉冲幅值A：脉冲信号变化的最大值。</li>
+<li>脉冲上升时间$T_r$：从脉冲幅值的<code>10%</code>上升到<code>90%</code>所需的时间。</li>
+<li>脉冲下降时间$T_f$：从脉冲幅值的<code>90%</code>下降到<code>10%</code>所需的时间。</li>
+<li>脉冲宽度$T_p$：从上升沿的脉冲幅度的<code>50%</code>到下降沿的脉冲幅度的<code>50%</code>所需的时间，这段时间也称为脉冲持续时间。</li>
+<li>脉冲周期$T$：周期性脉冲信号相邻的两个上升沿(或下降沿)的脉冲幅度的<code>10%</code>两点之间的时间间隔。</li>
+<li>脉冲频率：单位时间的脉冲数，$f=\frac{1}{T}$</li>
 </ol>
-</li>
-<li>随机存储器RAM与只读存储器ROM<ol>
-<li>RAM<ol>
-<li>SRAM</li>
-<li>DRAM</li>
-</ol>
-</li>
-<li>ROM</li>
-</ol>
-</li>
-<li>现实中常用存储设备及接口<ol>
-<li>存储设备<ol>
-<li>机械硬盘</li>
-<li>固态硬盘</li>
-</ol>
-</li>
-<li>接口<ol>
-<li>M.2</li>
-<li>SATA</li>
-<li>NVMe等</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="存储器的性能指标"><a href="#存储器的性能指标" class="headerlink" title="存储器的性能指标"></a>存储器的性能指标</h2><ol>
-<li><p>存储容量=存储字数×字长</p>
-</li>
-<li><p>单位成本：每位价格=总成本/总容量</p>
-</li>
-<li><p>存储速度：数据传输率=数据的宽度/存储周期</p>
-<ol>
-<li>存取时间T~a~：存取时间是指从启动一次存储器操作到完成该操作所经历</li>
-<li>存取周期T~m~：存取周期又称为读写周期或访问周期。它是指存储器进行一次完整的读写操作所需的全部时间，即连续两次独立地访问存储器操作（读或写操作）之间所需的最小时间间隔。</li>
-<li>主存带宽B~m~：主存带宽又称数据传输率，表示每秒从主存进出信息的最大数量，单位为字/秒、字节/秒（B/s）或位/秒（b/s）</li>
-</ol>
-<p><img src="/images/610-存储系统/20200509122542663.png" alt="存取时间与存取周期的关系"></p>
-</li>
-</ol>
-<h1 id="存储器的层次化结构"><a href="#存储器的层次化结构" class="headerlink" title="存储器的层次化结构"></a>存储器的层次化结构</h1><p>为了解决存储系统大容量、高速度和低成本3个相互制约的矛盾，在计算机系统中，通常采用了多级存储结构。如图所示。在图中由上至下，位价越来越低，速度越来越慢，容量越来越大，CPU 访问的频度也越来越低。</p>
-<p><img src="/images/610-存储系统/0b558372742e4bc195ba3192ae36fc93.png" alt="多级存储器结构"></p>
-<p>实际上，存储系统层次结构主要体现在<code>Cache-主存</code>层次和<code>主存-辅存</code>层次。在存储体系中，Cache、主存能与CPU直接交换信息，辅存则要通过主存与CPU交换信息；主存与CPU，Cache，辅存都能交换信息，如图所示。</p>
-<p><img src="/images/610-存储系统/41e49e7b5fb64ac79fab5b9ee7fb6767.png" alt="三级存储系统的层次结构及其构成"></p>
-<blockquote>
-<p>存储器层次结构的主要思想是上一层的存储器作为低一层存储器的高速缓存。</p>
-</blockquote>
-<ul>
-<li><p>Cache-主存</p>
-<ul>
-<li>主要解决<strong>CPU和主存速度不匹配的问题</strong></li>
-<li>速度接近于Cache，容量和位价却接近于主存</li>
-</ul>
-</li>
-<li><p>主存-辅存</p>
-<ul>
-<li><p>主要解决<strong>存储系统的容量问题</strong></p>
-</li>
-<li><p>速度接近于主存,容量和位价却接近于辅存</p>
-</li>
-<li><p>虚拟存储器</p>
-</li>
-<li><blockquote>
-<p>在<code>主存-辅存</code>这一层次的不断发展中,逐渐形成了==虚拟存储系统==，在这个系统中程序员编程的地址范围与虚拟存储器的地址空间相对应。对具有虚拟存储器的计算机系统而言，编程时可用的地址空间远大于主存空间。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<p>这就解决了速度、容量、成本这三者之间的矛盾，现代计算机系统儿乎都采用这种三级存储系统。需要注意的是，主存和 Cache之间的数据调动是出<code>硬件</code>自动完成的，对<code>所有程序员</code>均是<code>透明</code>的；而主存和辅存之间的数据调动则是由<code>硬件和操作系统</code>共同完成的，对<code>应用程序员</code>是<code>透明</code>的。</p>
-<blockquote>
-<p>注意：在<code>Cache-主存</code>和<code>主存-辅存</code>层次中，上一层中的内容都只是下一层中的内容的副本，也即Cache(或主存）中的内容只是主存(或辅存)中的内容的一部分</p>
-</blockquote>
-<h1 id="半导体随机存储器"><a href="#半导体随机存储器" class="headerlink" title="半导体随机存储器"></a>半导体随机存储器</h1><p><strong><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/动态随机存取存储器">动态随机存取存储器</a></strong>（<strong>Dynamic Random Access Memory</strong>，<strong>DRAM</strong>）</p>
-<p><strong><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/静态随机存取存储器">静态随机存取存储器</a></strong>（<strong>Static Random Access Memory，SRAM</strong>）</p>
-<p>主存储器由DRAM实现，靠处理器的那一层(Cache) 则由SRAM实现，它们都属于<code>易失性存储器</code>，只要电源被切断，原来保存的信息便会丢失。DRAM的每比特成本低于SRAM.速度也慢于SRAM，价格差异主要是因为制造DRAM需要更多的硅。而ROM属于<code>非易失性存储器</code>。</p>
-<h2 id="SRAM与DRAM"><a href="#SRAM与DRAM" class="headerlink" title="SRAM与DRAM"></a>SRAM与DRAM</h2><ul>
-<li>Cache由SRAM实现——易失性存储器</li>
-<li>主存由DRAM实现——易失性存储器</li>
-<li>外存由ROM实现——非易失性存储器</li>
-</ul>
-<h3 id="SRAM的工作原理"><a href="#SRAM的工作原理" class="headerlink" title="SRAM的工作原理"></a>SRAM的工作原理</h3><ul>
-<li>通常把存放一个 二进制位的物理器件称为存储元，它是存储器的最基本的构件。地址码相同的多个存储元构成一个存储单元。若干存储单元的集合构成存储体。</li>
-<li>静态随机存储器(SRAM) 的存储元是用<code>双稳态触发器</code>(六晶体管MOS) 来记忆信息的，因此即使信息被读出后，它仍保持其原状态而不需要再生(非破坏性读出)</li>
-<li>SRAM的存取速度快，但集成度低，功耗较大，所以一般用来组成高速缓冲存储器。</li>
-</ul>
-<h3 id="DRAM工作原理"><a href="#DRAM工作原理" class="headerlink" title="DRAM工作原理"></a>DRAM工作原理</h3><p><img src="/images/610-存储系统/Square_array_of_mosfet_cells_read.png" alt="DRAM4×4矩阵模型"></p>
-<p>与SRAM的存储原理不同，动态随机存储器(DRAM)是利用存储元电路中<strong>栅极电容上的电荷</strong>来存储信息的，DRAM的基本存储元通常只使用一个晶体管， 所以它比SRAM的密度要高很多。DRAM采用<code>地址复用技术</code>，地址线是原来的1/2，地址信号分行、列两次传送。</p>
-<p>相对于SRAM来说，DRAM具有容易集成、位价低、容量大和功耗低等优点，但DRAM ,的存取速度比SRAM的慢，一-般用来组成大容量主存系统。</p>
-<p>DRAM电容上的电荷般只能维持 1~ 2ms,因此即使电源不断电，信息也会自动消失。为此，每隔一定时间必须刷新，通常取2ms，称为刷新周期。常用的刷新方式有3种：</p>
-<ol>
-<li><strong>集中刷新</strong>：指在一个刷新周期内，利用段固定的时间，依次对存储器的所有行进行逐一再生，在此期间停止对存储器的读写操作，称为“死时间”，又称访存“死区”。优点是读写操作时不受刷新工作的影响:缺点是在集中刷新期间(死区)不能访问存储器。</li>
-</ol>
-<p>2) <strong>分散刷新</strong>：把对每行的刷新分散到各个工作周期中。这样，一个存储器的系统工作周期分为两部分：前半部分用于正常读、写或保持，后半部分用于刷新。这种刷新方式增加了系统的存取周期，如存储芯片的存取周期为0.5us， 则系统的存取周期为lus。优点是没有死区；缺点是加长了系统的存取周期，降低了整机的速度。<br>3) <strong>异步刷新</strong>：异步刷新是前两种方法的结合，它即可缩短”死时间“，又能充分利用最大刷新间隔为2ms的特点。具体做法是将刷新周期除以行数，得到两次刷新操作之间的时间间隔t。利用逻辑电路每隔时间t产生一次刷新请求。这样可以避免CPU连续等待过长的时间，而且减少了刷新次数，从根本上提高了整机的工作效率。</p>
-<p>DRAM的刷新需要注意以下问题：</p>
-<ul>
-<li>刷新对CPU是透明的，即刷新不依赖于外部的访问</li>
-<li>动态RAM的刷新单位是行，由芯片内部自行生成行地址</li>
-<li>刷新操作类似于读操作，但又有所不同</li>
-<li>刷新时不需要选片，即整个存储器的所有芯片同时被刷新</li>
-</ul>
-<blockquote>
-<p>要注意易失性存储器和刷新的区别，易失性存储器是指断电后数据丢失，SRAM和DRAM都满足断电内容消失，但需要刷新的只有DRAM，而SRAM不需要刷新。</p>
-</blockquote>
-<h1 id="SRAM存储芯片的构成"><a href="#SRAM存储芯片的构成" class="headerlink" title="SRAM存储芯片的构成"></a>SRAM存储芯片的构成</h1><blockquote>
-<p>Memory——存储/内存</p>
-<p>在这一小节，通过设计一个SRAM存储芯片来理解存储芯片的内部构成</p>
-</blockquote>
-<h2 id="存1位数据（Gated-Latch-锁存器）"><a href="#存1位数据（Gated-Latch-锁存器）" class="headerlink" title="存1位数据（Gated Latch-锁存器）"></a>存1位数据（Gated Latch-锁存器）</h2><blockquote>
-<p>如何存储1 bit数据?</p>
-</blockquote>
-<h3 id="AND-OR-锁存器"><a href="#AND-OR-锁存器" class="headerlink" title="AND-OR 锁存器"></a>AND-OR 锁存器</h3><blockquote>
-<p>SET输入，把输出变成1；RESET输入，把输出变成0</p>
-</blockquote>
-<ol>
-<li>初始状态：SET=0，RESET=0——输出OUTPUT为空</li>
-</ol>
-<p><img src="/images/610-存储系统/image-20220316221835214.png" alt="AND-OR 锁存器_初始状态:SET=0,RESET=0"></p>
-<ol>
-<li>SET输入（置SET=1）——输出OUTPUT写入为1</li>
-</ol>
-<p><img src="/images/610-存储系统/image-20220316223003702.png" alt="image-20220316223003702"></p>
-<ol>
-<li>SET置1后，即使SET恢复为0，输出仍然保持为1（即成功写入数据1）</li>
-</ol>
-<p><img src="/images/610-存储系统/image-20220316222740325.png" alt="AND-OR 锁存器_成功写入1"></p>
-<ol>
-<li>RESET置1，复位，输出恢复为0</li>
-</ol>
-<p><img src="/images/610-存储系统/image-20220316223200974.png" alt="复位 输出为“0”"></p>
-<h3 id="Gated-Latch-门锁"><a href="#Gated-Latch-门锁" class="headerlink" title="Gated Latch-门锁"></a>Gated Latch-门锁</h3><blockquote>
-<p>通过AND-OR锁存器可以实现1位输出锁存，但是AND-OR锁存器是SET置1就写入，没有控制是否允许写入的的逻辑电路，所以要增加允许写入电路，就形成了一个完整的1 bit数据寄存器</p>
-<p>WRITEENABLE允许写入为1时即可写入数据，DATAINPUT为1写入1，为0写入0，关闭WRITEENABLE（为0）即可锁存一位二进制数据</p>
-</blockquote>
-<ol>
-<li>初始状态</li>
-</ol>
-<p><img src="/images/610-存储系统/image-20220317110347327.png" alt="初始状态"></p>
-<ol>
-<li>允许写入打开（置1），数据写入为1，则输出为1，写入为0，输出即为0</li>
-</ol>
-<p><img src="/images/610-存储系统/image-20220317110648584.png" alt="WRITEENABLE=1，DATAINPUT=1，DATAOUTPUT=1"></p>
-<ol>
-<li>允许写入关闭（置0），无论数据写入为1还是0，输出都锁存为1</li>
-</ol>
-<p><img src="/images/610-存储系统/image-20220317110953648.png" alt="WRITEENABLE=0，DATAINPUT=1，DATAOUTPUT=1"></p>
-<p><img src="/images/610-存储系统/image-20220317111214320.png" alt="WRITEENABLE=0，DATAINPUT=0，DATAOUTPUT=1"></p>
-<blockquote>
-<p>输出DATAOUTPUT锁存为0同理，只要打开允许写入，输入置0，输出就写入0，关闭允许写入线，输出即可锁存为0</p>
-</blockquote>
-<h2 id="存8位数据（8-bit-Register-寄存器）"><a href="#存8位数据（8-bit-Register-寄存器）" class="headerlink" title="存8位数据（8-bit Register 寄存器）"></a>存8位数据（8-bit Register 寄存器）</h2><blockquote>
-<p>通过门锁可以实现1位数据写入与锁存控制，要实现8位数据写入与锁存控制可以将8个门锁并连起来，共用1根允许写入控制线，这样就构成了8位寄存器。</p>
-<p>WE打开，8根数据线DI同时写入对应额数据，然后关闭WE，即可锁存8位数据</p>
-</blockquote>
-<h3 id="8位寄存器仿真电路"><a href="#8位寄存器仿真电路" class="headerlink" title="8位寄存器仿真电路"></a>8位寄存器仿真电路</h3><ol>
-<li>初始状态</li>
-</ol>
-<p><img src="/images/610-存储系统/image-20220317130217480.png" alt="初始状态：WE=0"></p>
-<ol>
-<li>打开WE（WE=1），允许写入数据</li>
-</ol>
-<p><img src="/images/610-存储系统/image-20220317130436022.png" alt="WE=1"></p>
-<ol>
-<li>写入数据</li>
-</ol>
-<blockquote>
-<p>写入数据：假如写入数据<code>01101010</code>，则分别置对应的数据输入线为1</p>
-</blockquote>
-<p><img src="/images/610-存储系统/image-20220317130813513.png" alt="WE=1，DI=01101010，DO=01101010"></p>
-<ol>
-<li>关闭WE（WE=0），再关闭数据线DI，输出数据将锁存</li>
-</ol>
-<p><img src="/images/610-存储系统/image-20220317131014679.png" alt="WE=0，DI=0，DO=01101010"></p>
-<blockquote>
-<p>8 bit寄存器需要8根数据输入线、8根数据输出线和1根允许写入控制线，共17根线。</p>
-<p>如果继续扩展位数的话，64 bit寄存器就需要64根数据输入线、64根数据输出线和1根允许写入控制线，共129根线。</p>
-<p>需要注意的是：</p>
-<ul>
-<li>无论如何扩展存储器，允许写入控制线只需要1根就足够了</li>
-<li>但是随着扩展位数越来越多，数据输入输出线也就越多，在集成电路中，这是浪费资源的。</li>
-</ul>
-</blockquote>
-<h2 id="存储矩阵"><a href="#存储矩阵" class="headerlink" title="存储矩阵"></a>存储矩阵</h2><blockquote>
-<p>为了解决数据线数随存储容量扩展而增多的问题，引入存储矩阵的概念，通过矩阵的地址可以定位每1个门锁，确定哪些门锁应该写入/读出数据，所有门锁共用数据输入线（即形成<code>数据总线</code>）</p>
-</blockquote>
-<h2 id="存储器容量的扩展"><a href="#存储器容量的扩展" class="headerlink" title="存储器容量的扩展"></a>存储器容量的扩展</h2><blockquote>
-<p>门锁可以存1 bit数据，即存储字数为1，存储字长也为1，计数范围只有0~1，这与实际储存器的要求有很大差距，因此需要在字和位两方面进行扩充才能满足实际存储的容量要求。通常采用<code>位扩展法</code>，<code>字扩展法</code>，<code>字位同时扩展法</code>来扩展主存容量。</p>
-</blockquote>
-<h3 id="位扩展法"><a href="#位扩展法" class="headerlink" title="位扩展法"></a>位扩展法</h3><blockquote>
-<p>在计算机中，CPU的数据线与存储芯片的数据线不一定相等，此时必须对存储芯片扩位（即进行位扩展，用多个门锁对字进行扩展，增加存储字长）使其数据位数与CPU的数据线相等。</p>
-<ul>
-<li>如现在笔记本电脑CPU一次处理数据长度一般为64 bit（即机器字长为64位，64位CPU），为了提高CPU与内存配合效率，内存应该与CPU字长相等<ul>
-<li>说明：CPU字长64 bit时，如果内存存储字长为32 bit，CPU处理一次数据就要等内存传两次数据，浪费了CPU的性能，因此内存存储字长应该与CPU字长一致</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h3 id="存8位数据（Register-寄存器）"><a href="#存8位数据（Register-寄存器）" class="headerlink" title="存8位数据（Register-寄存器）"></a>存8位数据（Register-寄存器）</h3><p>​                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               </p>
+<p>在数字电路中，通常是根据脉冲信号的有无\个数\宽度和频率来进行工作的,所以抗干扰能力较强（干扰往往只影响脉冲幅度），准确度较高。</p>
+<p>此外，脉冲型信号还有正负之分。如果脉冲跃变后的值比初始值高，则为<code>正脉冲</code>;反之则为<code>负脉冲</code>。</p>
+<p><img src="/images/数字信号/正负脉冲.jpg" alt="正负脉冲"></p>
 
                 
             </div>
@@ -701,7 +505,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://song-bin21.github.io/posts/eaded48d/">https://song-bin21.github.io/posts/eaded48d/</a>
+                    <a href="https://song-bin21.github.io/posts/88e5118f/">https://song-bin21.github.io/posts/88e5118f/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -739,12 +543,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/">
-                                    <span class="chip bg-color">存储系统</span>
+                                <a href="/tags/%E6%95%B0%E5%AD%97-%E8%84%89%E5%86%B2-%E4%BF%A1%E5%8F%B7/">
+                                    <span class="chip bg-color">数字(脉冲)信号</span>
                                 </a>
                             
-                                <a href="/tags/%E9%94%81%E5%AD%98%E5%99%A8/">
-                                    <span class="chip bg-color">锁存器</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8/">
+                                    <span class="chip bg-color">数据的存储</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%80%9A%E4%BF%A1/">
+                                    <span class="chip bg-color">通信</span>
                                 </a>
                             
                         </div>
@@ -1062,13 +870,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/89d6ea9b/">
+                <a href="/posts/b3aa977/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="基本门电路">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="数制">
                         
-                        <span class="card-title">基本门电路</span>
+                        <span class="card-title">数制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1100,8 +908,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%80%BB%E8%BE%91%E9%97%A8%E7%94%B5%E8%B7%AF/">
-                        <span class="chip bg-color">逻辑门电路</span>
+                    <a href="/tags/%E6%95%B0%E5%88%B6%E4%B8%8E%E6%95%B0%E5%88%B6%E8%BD%AC%E6%8D%A2/">
+                        <span class="chip bg-color">数制与数制转换</span>
                     </a>
                     
                 </div>
@@ -1115,31 +923,35 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/df9ee6ae/">
+                <a href="/posts/89d6ea9b/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="计算机中数据的表示和运算">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="基本门电路">
                         
-                        <span class="card-title">计算机中数据的表示和运算</span>
+                        <span class="card-title">基本门电路</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            计算机中数据的表示和运算
+                            数字电路基础，计算机硬件基础
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/" class="post-category">
-                                    计算机理论
+                            <a href="/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/" class="post-category">
+                                    数字电路
+                                </a>
+                            
+                            <a href="/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="post-category">
+                                    计算机
                                 </a>
                             
                             
@@ -1149,12 +961,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
-                        <span class="chip bg-color">计算机组成原理</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/">
-                        <span class="chip bg-color">计算机中数据的表示和运算</span>
+                    <a href="/tags/%E9%80%BB%E8%BE%91%E9%97%A8%E7%94%B5%E8%B7%AF/">
+                        <span class="chip bg-color">逻辑门电路</span>
                     </a>
                     
                 </div>
@@ -1285,6 +1093,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 
