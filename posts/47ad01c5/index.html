@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="friends, LuckySong">
-    <meta name="description" content="LuckySong">
+    <meta name="keywords" content="计算机系统概述, LuckySong">
+    <meta name="description" content="计算机与计算机系统">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>friends | LuckySong</title>
+    <title>计算机系统概述 | LuckySong</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -245,275 +245,471 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                LuckySong&#39;s Blog
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.png';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
 </script>
 
 
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">计算机系统概述</h1>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
-    .friends-container {
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
         margin-top: -100px;
-        margin-bottom: 30px;
+        visibility: hidden;
     }
 
-    .friends-container .tag-title {
-        margin-bottom: 10px;
-        color: #3C4858;
-        font-size: 1.75rem;
-        font-weight: 400;
+    #articleContent :focus {
+        outline: none;
     }
 
-    .frind-ship img {
-        border-radius: 50%;
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
     }
 
-    /* 一下是按钮样式 */
-
-    .frind-ship {
-        padding: 10px 20px;
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
     }
 
-    .frind-ship .title {
-        display: flex;
-        align-items: center;
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
     }
 
-    .frind-ship .title div {
-        color: #fff;
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
         padding-left: 10px;
     }
 
-    .frind-ship .title img {
-        width: 100px;
-        height: 100px;
-        flex-shrink: 0;
+    #toc-content ol li {
+        padding-left: 10px;
     }
 
-    .frind-ship .title h1 {
-        padding-bottom: 5px;
-        border-bottom: 2px solid #fff;
-        position: relative;
-        top:-15px;
-        left: 3px;
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
     }
 
-    .friend-button {
-        display: flex;
-        justify-content: center;
-        margin-bottom: -27px;
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
     }
 
-    .friend-button a {
-        border-radius: 40px;
+    #toc-content .is-active-link {
+        color: #42b983;
     }
 
-    .friend-all .tag-post {
-        margin-bottom: 30px;
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
     }
 
-    .button-caution {
-        background-color: #FF4351;
-        border-color: #FF4351;
-        color: #FFF;
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
     }
 
-    .button {
-        font-weight: 300;
-        font-size: 16px;
-        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        text-decoration: none;
-        text-align: center;
-        line-height: 40px;
-        height: 40px;
-        padding: 0 40px;
-        margin: 0;
-        display: inline-block;
-        appearance: none;
-        cursor: pointer;
-        border: none;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-transition-property: all;
-        transition-property: all;
-        -webkit-transition-duration: .3s;
-        transition-duration: .3s;
-    }
-
-    .title {
-        margin-bottom: 0rem !important;
-    }
-
-    .card {
-        margin: 3rem 0 1rem 0 !important;
-    }
-
-    .button-glow.button-caution {
-        -webkit-animation-name: glowing-caution;
-        animation-name: glowing-caution;
-    }
-
-    @-webkit-keyframes glowing-caution {
-        from {
-            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-        }
-
-        50% {
-            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-        }
-
-        to {
-            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-        }
-    }
-
-    @keyframes glowing-caution {
-        from {
-            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-        }
-
-        50% {
-            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-        }
-
-        to {
-            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-        }
-    }
-
-    .button-caution:hover {
-        background-color: #ff7680;
-        border-color: #ff7680;
-        color: #FFF;
-        text-decoration: none;
-    }
-
-    .frind-card1 {
-        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-    }
-
-    .frind-card2 {
-        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-
-    .frind-card3 {
-        background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-    }
-
-    .frind-card4 {
-        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-    }
-
-    .frind-card5 {
-        background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
-    }
-
-    .frind-card6 {
-        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-    }
-
-    .frind-card7 {
-        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-    }
-
-    .frind-card8 {
-        background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
-    }
-
-    .frind-card9 {
-        background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
-    }
-
-    .frind-card10 {
-        background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
-    }
-
-    article .card {
-        overflow: visible !important;
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
     }
 </style>
-
-<main class="content">
-    <div class="container friends-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fas fa-address-book"></i>&nbsp;&nbsp;友情链接
-                </div>
-                <article id="friends-link">
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
                     
-                </article>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AE%A1%E7%BB%84/">
+                                <span class="chip bg-color">计组</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/CS/" class="post-category">
+                                CS
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-04-09
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-04-18
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    4 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
+        <hr class="clearfix">
 
         
-            <div class="card">
-                <div class="card-content">
-                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">
-                </div>
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>计算机组成原理这门课是研究计算机各硬件是如何协调工作的!</p>
+<p>电子数字计算机的硬件是由数字逻辑电路构成，所以只能处理数字信号，数字信号只有两种状态：开/关，在数字电路中常用低/高电平分别表示0/1，因此计算机硬件唯一能识别的数据就是二进制0/1</p>
+<p>为进一步了解计算机硬件实现逻辑，可以学习<code>数字电路</code>知识?</p>
+<ul>
+<li>数字、文字、图像如何用二进制表示？</li>
+<li>CPU如何对二进制进行加减乘除？</li>
+<li>如何存储这些二进制数？</li>
+<li>如何从内存中取出想要的数据？</li>
+<li>CPU如何识别和执行我们写的程序？</li>
+</ul>
+</blockquote>
+<h1 id="计算机发展历程"><a href="#计算机发展历程" class="headerlink" title="计算机发展历程"></a>计算机发展历程</h1><h2 id="什么是计算机系统"><a href="#什么是计算机系统" class="headerlink" title="什么是计算机系统"></a>什么是计算机系统</h2><ol>
+<li><p>计算机与计算机系统</p>
+<ol>
+<li><p>计算机：指计算机硬件系统，即日常生活中所说的裸机（主机）和外设等纯硬件部分</p>
+</li>
+<li><p>计算机系统：即包含计算机硬件系统和计算机软件系统</p>
+<ol>
+<li>硬件系统</li>
+<li>软件系统<ol>
+<li>BIOS基本输入输出系统：用于操作系统的自检和启动</li>
+<li>系统软件：用来管理整个计算机系统<ol>
+<li>操作系统</li>
+<li>数据库管理系统DBMS</li>
+<li>标准程序库</li>
+<li>网络软件（TCP/IP协议等）</li>
+<li>语言处理程序</li>
+<li>服务程序等</li>
+</ol>
+</li>
+<li>应用软件：按任务需要编制成的各种程序</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>日常生活中，我们所说的计算机通常指计算机系统，因为购买的电脑到用户手中一般直接装好了BIOS，操作系统和其他常用应用程序等软件系统</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>计算机系统的性能</p>
+<ol>
+<li>由于计算机系统由硬件系统和软件系统组成，因此计算机系统性能的好坏也取决于软硬件功能的总和</li>
+</ol>
+</li>
+</ol>
+<h2 id="计算机硬件的发展"><a href="#计算机硬件的发展" class="headerlink" title="计算机硬件的发展"></a>计算机硬件的发展</h2><h3 id="计算机硬件的四代变化"><a href="#计算机硬件的四代变化" class="headerlink" title="计算机硬件的四代变化"></a>计算机硬件的四代变化</h3><blockquote>
+<p>1946，世界上第一台电子数字计算机ENIAC问世</p>
+</blockquote>
+<ol>
+<li>第一代计算机：1946-1957——电子管时代</li>
+<li>第二代计算机：1958-1964——晶体管时代</li>
+<li>第三代计算机：1965-1971——中小规模集成电路时代</li>
+<li>第四代计算机：1972-至今——超大规模集成电路时代，开始出现微处理器、微型计算机、个人计算机</li>
+<li>第五代计算机：同人工智能结合的智能计算机系统</li>
+</ol>
+<h3 id="微处理器的发展"><a href="#微处理器的发展" class="headerlink" title="微处理器的发展"></a>微处理器的发展</h3><p><img src="/images/计算机系统概述/image-20220409143922181.png" alt="Intel微处理器发展"></p>
+<h3 id="硬件历史"><a href="#硬件历史" class="headerlink" title="硬件历史"></a>硬件历史</h3><ol>
+<li>1947年，贝尔实验室，发明了<code>晶体管</code><img src="/images/计算机系统概述/image-20220409144523518.png" alt="肖克利"></li>
+<li>1955年，肖克利在硅谷创建肖克利实验室股份有限公司</li>
+<li>1957年八叛徒创立仙童半导体公司<img src="/images/计算机系统概述/image-20220409144654025.png" alt="肖克利公司成员离开并创立仙童半导体公司"></li>
+<li>1959年，仙童半导体公司发明集成电路<img src="/images/计算机系统概述/image-20220409144757762.png" alt="仙童半导体公司"></li>
+<li>1968年，摩尔等人离开仙童，创立Intel</li>
+<li>1969年，仙童销售部负责人桑德斯离开仙童，创立AMD</li>
+<li>1970年，仙童公司生产出第一个较大容量的半导体存储设备</li>
+</ol>
+<h2 id="计算机软件的发展"><a href="#计算机软件的发展" class="headerlink" title="计算机软件的发展"></a>计算机软件的发展</h2><ol>
+<li>编程语言<ol>
+<li>机器语言</li>
+<li>汇编语言</li>
+<li>高级语言<ol>
+<li>FORTRAN</li>
+<li>PASCAL</li>
+<li>C++</li>
+<li>Java</li>
+<li>python</li>
+<li>PHP</li>
+<li>Go</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>操作系统 <ol>
+<li>UNIX</li>
+<li>LINUX</li>
+<li>DOS——命令行界面</li>
+<li>Windows</li>
+<li>MAC OS</li>
+<li>Android</li>
+<li>IOS</li>
+</ol>
+</li>
+</ol>
+<h2 id="目前的发展趋势"><a href="#目前的发展趋势" class="headerlink" title="目前的发展趋势"></a>目前的发展趋势</h2><blockquote>
+<p>两极分化：</p>
+<ul>
+<li>一极是微型计算机向更微型化、网络化、高性能、多用途方向发展；</li>
+<li>另一极是巨型机向更巨型化、超高速、并行处理、智能化方向发展</li>
+</ul>
+</blockquote>
+<h1 id="计算机硬件的基本组成"><a href="#计算机硬件的基本组成" class="headerlink" title="计算机硬件的基本组成"></a>计算机硬件的基本组成</h1><h2 id="早期的冯·诺依曼机"><a href="#早期的冯·诺依曼机" class="headerlink" title="早期的冯·诺依曼机"></a>早期的冯·诺依曼机</h2><blockquote>
+<p>冯诺依设计的第一台电子数字计算机ENIAC，通过手动接线来控制计算机计算，很不方便，计算速度就被手动接线降低了，为了解决这个问题，冯·诺依曼就提出了<code>存储程序</code>的概念</p>
+<h3 id="存储程序："><a href="#存储程序：" class="headerlink" title="存储程序："></a>存储程序：</h3><ul>
+<li>指将指令以二进制代码的形式事先输入计算机的主存储器，然后按其在存储器中首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直到程序执行结束。</li>
+</ul>
+</blockquote>
+<p><img src="/images/计算机系统概述/image-20220409161038757.png" alt="早期的冯诺依曼机"></p>
+<p>冯诺依曼计算机的特点：</p>
+<ol>
+<li>计算机由五大部件组成</li>
+<li>指令和数据以同等地位存于存储器，可按地址寻访</li>
+<li>指令和数据用二进制表示</li>
+<li>指令由操作码和地址组成</li>
+<li>存储程序</li>
+<li><strong>以运算器为中心</strong>：输入/输出设备与存储器之间的数据传送通过运算器完成</li>
+</ol>
+<h2 id="现代计算机的结构"><a href="#现代计算机的结构" class="headerlink" title="现代计算机的结构"></a>现代计算机的结构</h2><p><img src="/images/计算机系统概述/image-20220409194208771.png" alt="现代计算机结构"></p>
+<p><img src="/images/计算机系统概述/image-20220409194504824.png" alt="现代计算机结构"></p>
+<h2 id="计算机的五大功能部件"><a href="#计算机的五大功能部件" class="headerlink" title="计算机的五大功能部件"></a>计算机的五大功能部件</h2><blockquote>
+<ol>
+<li>运算器</li>
+<li>控制器</li>
+<li>存储器（主存+辅存-辅存属于外设）</li>
+<li>输入设备</li>
+<li>输出设备</li>
+</ol>
+</blockquote>
+<h3 id="主存储器-内存-的基本组成"><a href="#主存储器-内存-的基本组成" class="headerlink" title="主存储器(内存)的基本组成"></a>主存储器(内存)的基本组成</h3><blockquote>
+<p><img src="/images/计算机系统概述/image-20220409200725183.png" alt="主存储器的结构"></p>
+<ul>
+<li>数据在存储体内按地址存储</li>
+<li>MAR位数反映存储单元的个数</li>
+<li>MDR位数=存储字长</li>
+</ul>
+</blockquote>
+<ol>
+<li>主存储器的数据写入与读出过程</li>
+<li>存储器的一些概念：<ol>
+<li>存储单元：每个存储单元存放一串二进制代码</li>
+<li>存储字：存储单元中二进制代码的组合</li>
+<li>存储字长：存储单元中二进制代码的位数</li>
+<li>存储元：即存储二进制的电子元件，每个存储元可存1 bit</li>
+</ol>
+</li>
+</ol>
+<h3 id="运算器的基本组成"><a href="#运算器的基本组成" class="headerlink" title="运算器的基本组成"></a>运算器的基本组成</h3><blockquote>
+<p><img src="/images/计算机系统概述/image-20220409202718483.png" alt="运算器的结构"></p>
+</blockquote>
+<h3 id="控制器的基本组成"><a href="#控制器的基本组成" class="headerlink" title="控制器的基本组成"></a>控制器的基本组成</h3><blockquote>
+<p><img src="/images/计算机系统概述/image-20220409202854345.png" alt="控制器的组成"><img src="/images/计算机系统概述/image-20220409203231172.png" alt="控制器的作用"></p>
+</blockquote>
+<h1 id="思考问题"><a href="#思考问题" class="headerlink" title="思考问题"></a>思考问题</h1><ol>
+<li>计算机由哪几部分组成？以哪部分为中心？</li>
+<li>主频高的CPU一定比主频低的CPU快吗？为什么？</li>
+<li>翻译程序、汇编程序、编译程序、解释程序有什么区别？各自的特性是什么？</li>
+<li>不同级别的语言编写的程序有什么区别？哪种语言编写的程序能被硬件直接执行？</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">宋彬</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://song-bin21.github.io/posts/47ad01c5/">https://song-bin21.github.io/posts/47ad01c5/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">宋彬</a>
+                    !
+                </span>
             </div>
         
+    </div>
 
-        <div class="card">
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
 
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%AE%A1%E7%BB%84/">
+                                    <span class="chip bg-color">计组</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
             
+        </div>
+    </div>
 
-            
+    
 
-            
+    
 
-            
+    
 
-            
-            <style>
+    
+
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -778,23 +974,243 @@
 <!--酷Q推送-->
 
 
-            
+    
 
-            
+    
 
-            
+    
 
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/47ad01c5/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="计算机系统概述">
+                        
+                        <span class="card-title">计算机系统概述</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            计算机与计算机系统
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/CS/" class="post-category">
+                                    CS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%A1%E7%BB%84/">
+                        <span class="chip bg-color">计组</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/37cc9d5a/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="计算机中数据的表示与运算">
+                        
+                        <span class="card-title">计算机中数据的表示与运算</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            数据在计算机中是如何表示、运算和存储的？
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/CS/" class="post-category">
+                                    CS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%A1%E7%BB%84/">
+                        <span class="chip bg-color">计组</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
-</main>
+</div>
 
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
-        $('#friends-link').masonry({
-            itemSelector: '.friend-div'
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4, h5'
         });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, h5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
     });
 </script>
+
+    
+
+</main>
+
+
 
 
     <footer class="page-footer bg-color">

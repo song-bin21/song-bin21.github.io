@@ -6,7 +6,7 @@
   <link href="https://song-bin21.github.io/atom.xml" rel="self"/>
   
   <link href="https://song-bin21.github.io/"/>
-  <updated>2022-03-24T05:25:58.641Z</updated>
+  <updated>2022-04-18T13:37:59.804Z</updated>
   <id>https://song-bin21.github.io/</id>
   
   <author>
@@ -17,168 +17,83 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>数制</title>
-    <link href="https://song-bin21.github.io/posts/b3aa977/"/>
-    <id>https://song-bin21.github.io/posts/b3aa977/</id>
-    <published>2022-03-21T07:03:24.000Z</published>
-    <updated>2022-03-24T05:25:58.641Z</updated>
+    <title>计算机系统概述</title>
+    <link href="https://song-bin21.github.io/posts/47ad01c5/"/>
+    <id>https://song-bin21.github.io/posts/47ad01c5/</id>
+    <published>2022-04-09T05:24:08.000Z</published>
+    <updated>2022-04-18T13:37:59.804Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;常用数制&quot;&gt;&lt;a href=&quot;#常用数制&quot;</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;计算机组成原理这门课是研究计算机各硬件是如何协调工作的!&lt;/p&gt;
+&lt;p&gt;电子数字计算机的硬件是由数字逻辑电路构成，所以只能处理数字信号，数字信号只有两种状态：开/关，在数字电路中常用低/高电平分别表示0/1，因此计算机硬件唯一能识别的数据就是二进制</summary>
         
       
     
     
     
-    <category term="数字电路" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/"/>
-    
-    <category term="计算机" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    <category term="CS" scheme="https://song-bin21.github.io/categories/CS/"/>
     
     
-    <category term="数制与数制转换" scheme="https://song-bin21.github.io/tags/%E6%95%B0%E5%88%B6%E4%B8%8E%E6%95%B0%E5%88%B6%E8%BD%AC%E6%8D%A2/"/>
+    <category term="计组" scheme="https://song-bin21.github.io/tags/%E8%AE%A1%E7%BB%84/"/>
     
   </entry>
   
   <entry>
-    <title>数字(脉冲)信号</title>
-    <link href="https://song-bin21.github.io/posts/88e5118f/"/>
-    <id>https://song-bin21.github.io/posts/88e5118f/</id>
-    <published>2022-03-21T07:03:24.000Z</published>
-    <updated>2022-03-22T10:42:20.710Z</updated>
+    <title>计算机中数据的表示与运算</title>
+    <link href="https://song-bin21.github.io/posts/37cc9d5a/"/>
+    <id>https://song-bin21.github.io/posts/37cc9d5a/</id>
+    <published>2022-03-15T10:10:08.000Z</published>
+    <updated>2022-04-20T09:31:40.545Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;数据的表示-数制与编码&quot;&gt;&lt;a href=&quot;#数据的表示-数制与编码&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="数字电路" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/"/>
-    
-    <category term="计算机" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    <category term="CS" scheme="https://song-bin21.github.io/categories/CS/"/>
     
     
-    <category term="数字(脉冲)信号" scheme="https://song-bin21.github.io/tags/%E6%95%B0%E5%AD%97-%E8%84%89%E5%86%B2-%E4%BF%A1%E5%8F%B7/"/>
-    
-    <category term="数据的存储" scheme="https://song-bin21.github.io/tags/%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8/"/>
-    
-    <category term="通信" scheme="https://song-bin21.github.io/tags/%E9%80%9A%E4%BF%A1/"/>
+    <category term="计组" scheme="https://song-bin21.github.io/tags/%E8%AE%A1%E7%BB%84/"/>
     
   </entry>
   
   <entry>
-    <title>基本门电路</title>
-    <link href="https://song-bin21.github.io/posts/89d6ea9b/"/>
-    <id>https://song-bin21.github.io/posts/89d6ea9b/</id>
-    <published>2022-03-21T07:03:24.000Z</published>
-    <updated>2022-03-22T08:47:47.702Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;逻辑门电路的基本概念&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="数字电路" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/"/>
-    
-    <category term="计算机" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-    <category term="逻辑门电路" scheme="https://song-bin21.github.io/tags/%E9%80%BB%E8%BE%91%E9%97%A8%E7%94%B5%E8%B7%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>逻辑代数</title>
-    <link href="https://song-bin21.github.io/posts/7b179712/"/>
-    <id>https://song-bin21.github.io/posts/7b179712/</id>
-    <published>2022-03-21T07:03:24.000Z</published>
-    <updated>2022-03-22T10:15:24.793Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="数字电路" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/"/>
-    
-    <category term="计算机" scheme="https://song-bin21.github.io/categories/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-    <category term="逻辑代数" scheme="https://song-bin21.github.io/tags/%E9%80%BB%E8%BE%91%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机中数据是如何存储的？</title>
+    <title>计算机中数据存储器的构成！</title>
     <link href="https://song-bin21.github.io/posts/eaded48d/"/>
     <id>https://song-bin21.github.io/posts/eaded48d/</id>
     <published>2022-03-15T10:10:08.000Z</published>
-    <updated>2022-03-24T05:31:02.365Z</updated>
+    <updated>2022-04-18T13:40:08.308Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;存储器概述&quot;&gt;&lt;a href=&quot;#存储器概述&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;存储器概述&quot;&gt;&lt;a href=&quot;#存储器概述&quot; class=&quot;headerlink&quot; title=&quot;存储器概述&quot;&gt;&lt;/a&gt;存储器概述&lt;/h1&gt;&lt;h2 id=&quot;存储器的分类&quot;&gt;&lt;a href=&quot;#存储器的分类&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="计算机理论" scheme="https://song-bin21.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/"/>
+    <category term="CS" scheme="https://song-bin21.github.io/categories/CS/"/>
     
     
     <category term="存储系统" scheme="https://song-bin21.github.io/tags/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="锁存器" scheme="https://song-bin21.github.io/tags/%E9%94%81%E5%AD%98%E5%99%A8/"/>
     
-  </entry>
-  
-  <entry>
-    <title>计算机中数据的表示和运算</title>
-    <link href="https://song-bin21.github.io/posts/df9ee6ae/"/>
-    <id>https://song-bin21.github.io/posts/df9ee6ae/</id>
-    <published>2022-03-04T04:00:00.000Z</published>
-    <updated>2022-03-24T05:22:52.775Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="计算机理论" scheme="https://song-bin21.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/"/>
-    
-    
-    <category term="计算机组成原理" scheme="https://song-bin21.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
-    
-    <category term="计算机中数据的表示和运算" scheme="https://song-bin21.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/"/>
+    <category term="计组" scheme="https://song-bin21.github.io/tags/%E8%AE%A1%E7%BB%84/"/>
     
   </entry>
   
@@ -187,20 +102,20 @@
     <link href="https://song-bin21.github.io/posts/a673609b/"/>
     <id>https://song-bin21.github.io/posts/a673609b/</id>
     <published>2022-03-04T04:00:00.000Z</published>
-    <updated>2022-03-21T12:55:40.419Z</updated>
+    <updated>2022-04-18T13:41:12.612Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;C-程序结构&quot;&gt;&lt;a href=&quot;#C-程序结构&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;C-程序结构&quot;&gt;&lt;a href=&quot;#C-程序结构&quot; class=&quot;headerlink&quot; title=&quot;C 程序结构&quot;&gt;&lt;/a&gt;C 程序结构&lt;/h1&gt;&lt;p&gt;在我们学习 C 语言的基本构建块之前，让我们先来看看一个最小的 C</summary>
         
       
     
     
     
-    <category term="计算机理论" scheme="https://song-bin21.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/"/>
+    <category term="CS" scheme="https://song-bin21.github.io/categories/CS/"/>
     
     
     <category term="编程语言" scheme="https://song-bin21.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
@@ -214,50 +129,25 @@
     <link href="https://song-bin21.github.io/posts/ba003d1c/"/>
     <id>https://song-bin21.github.io/posts/ba003d1c/</id>
     <published>2022-03-04T04:00:00.000Z</published>
-    <updated>2022-03-24T05:25:12.852Z</updated>
+    <updated>2022-04-18T13:41:27.878Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;学习计算机语言需要了解的知识&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;学习计算机语言需要了解的知识&quot;&gt;&lt;a href=&quot;#学习计算机语言需要了解的知识&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="计算机理论" scheme="https://song-bin21.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/"/>
+    <category term="CS" scheme="https://song-bin21.github.io/categories/CS/"/>
     
     
     <category term="编程语言" scheme="https://song-bin21.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     <category term="C语言程序设计" scheme="https://song-bin21.github.io/tags/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux基础</title>
-    <link href="https://song-bin21.github.io/posts/480d/"/>
-    <id>https://song-bin21.github.io/posts/480d/</id>
-    <published>2022-02-28T06:18:38.000Z</published>
-    <updated>2022-03-21T10:58:57.041Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="计算机理论" scheme="https://song-bin21.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/"/>
-    
-    
-    <category term="Linux基础" scheme="https://song-bin21.github.io/tags/Linux%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
